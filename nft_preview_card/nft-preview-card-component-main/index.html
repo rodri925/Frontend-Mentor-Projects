@@ -42,9 +42,15 @@
 
     h1 {
       color: white;
+      padding-top: 3%;
       padding-left: 8%;
       font-family: 'Outfit', sans-serif;
       font-size: .85rem;
+    }
+
+    h1:hover {
+      color:hsl(178, 100%, 50%);
+      cursor: pointer;
     }
 
     .info {
@@ -66,13 +72,56 @@
       height: 5%;
     }
 
-    .main-pic {
+    .card-img-container {
       position: relative;
       height: 50%;
       width: 83%;
       margin-left: 8%;
       margin-top: 4%;
+    }
+
+    .main-pic {
+      position: relative;
+      height: 100%;
+      width: 100%;
       border-radius: 3%;
+      margin-top: 4%;
+    }
+
+    .overlay {
+      position: absolute;
+      margin-top: 4%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 3%;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .3s ease;
+      background-color: cyan;
+    }
+
+    .icon {
+      position: absolute;
+      left: 43%;
+      bottom: 40%;
+      width: 15%;
+      height: auto;
+    }
+
+    .card-img-container:hover .overlay {
+      opacity: .7;
+      cursor: pointer;
+    }
+
+    .card-img-container:hover .icon {
+      opacity: 1;
+    }
+
+    .main-pic:hover {
+      background-image: "./images/icon_view.svg";
     }
 
     .price {
@@ -111,6 +160,11 @@
       color: white;
     }
 
+    bold:hover {
+      color:hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
     .info-price-box {
       display: flex;
       flex-direction: row;
@@ -126,12 +180,33 @@
       border-radius: 50%;
       margin-right: 5%;
     }
+
+    @media all and (max-width: 900px) and (min-width: 500px) {
+      article {
+        width: 45%;
+      }
+
+      html {
+        font-size: calc(1.5vw + 1.5vh)
+      }
+    }
+
+    @media all and (max-width: 500px){
+      article {
+        width: 80%;
+      }
+
+      html {
+        font-size: calc(1.5vw + 1.5vh)
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <article class="card">
-  <img src="images/image-equilibrium.jpg" class="main-pic">
+  <div class="card-img-container"><img src="images/image-equilibrium.jpg" class="main-pic"><div class="overlay"><img src="./images/icon-view.svg" class="icon"></div></div>
   <h1>Equilibrium #3429</h1>
 
   <p class="info">Our Equilibrium collection promotes balance and calm.</p>
