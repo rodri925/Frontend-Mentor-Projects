@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --pale_blue: hsl(225,100%,94%);
+      --bright_blue: hsl(245,75%,52%);
+      --v_pale_blue: hsl(225,100%,98%);
+      --desat_blue: hsl(224,23%,55%);
+      --dark_blue: hsl(223,47%,23%);
+    }
+    
+    .attribution { font-size: 11px; text-align: center; position: relative; top: 15%; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    body {
+      background-image: url("./images/pattern-background-desktop.svg");
+      background-repeat: repeat-x;
+      background-color: var(--pale_blue);
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    article {
+      display: flex;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+      flex-direction: column;
+      align-items: center;
+      align-content: space-around;
+      position: relative;
+      width: 27%;
+      height: 77%;
+      margin: auto;
+      top: 11%;
+    }
+
+    .container-2 {
+      display: flex;
+      font-weight: 500;
+      font-size: .8rem;
+      width: 70%;
+      height: 13%;
+      background-color: var(--v_pale_blue);
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5%;
+    }
+
+    .container-2 a {
+      padding-right: 5%;
+    }
+
+    .container-2 a:hover {
+      opacity: 70%;
+    }
+    .container-3 {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5%;
+      width: 45%;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .container-3 b {
+      color: black;
+    }
+
+    .container p {
+      text-align: center;
+    }
+
+    .container h1 {
+      font-weight: 900;
+    }
+
+    .heroImg {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      width: 100%;
+    }
+
+    .main-p {
+      position: relative;
+      color: var(--desat_blue);
+      padding-left: 15%;
+      padding-right: 15%;
+      bottom: 2%;
+      font-weight: 500;
+    }
+
+    .container-3 {
+      color: var(--desat_blue);
+    }
+
+    .container-3 img {
+      position: relative;
+      width: 30%;
+      height: 30%;
+    }
+
+    .btn {
+      width: 70%;
+      border: none;
+      height: 7%;
+      background-color: var(--bright_blue);
+      color: white;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin-top: 5%;
+    }
+
+    .btn:hover {
+      opacity: 70%;
+      cursor: pointer;
+    }
+
+    .btn-white {
+      background-color: white;
+      color: var(--desat_blue);
+      margin-top: 3%;
+      box-shadow: none;
+    }
+
+    .btn-white:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+    @media all and (max-width: 500px) {
+      article {
+        width: 80%;
+      }
+    }
+    @media all and (max-width: 750px) and (min-width: 501px) {
+      article {
+        width: 60%;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+<article class="container">
+  <img src="./images/illustration-hero.svg" class="heroImg">
+  <h1>Order Summary</h1>
+
+  <p class="main-p">You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!</p>
+
+  <div class="container-2"><div class="container-3"><img src="./images/icon-music.svg"><div><p><b>Annual Plan</b>
+  $59.99/year</p></div></div>
+
+  <a href="#"><b>Change</b></a>
+  </div>
+
+  <button class="btn"><b>Proceed to Payment</b></button>
+  <button class="btn btn-white"><b>Cancel Order</b></button>
+</article>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Malik Rodriguez</a>.
+  </div>
+</body>
+</html>
